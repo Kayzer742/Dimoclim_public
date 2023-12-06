@@ -16,7 +16,6 @@ def check_password():
         """Checks whether a password entered by the user is correct."""
         if hmac.compare_digest(st.session_state["password"], st.secrets["password"]):
             st.session_state["password_correct"] = True
-            del st.session_state["password"]  # Don't store the password.
         else:
             st.session_state["password_correct"] = False
 
@@ -37,8 +36,7 @@ if not check_password():
 
 def runstreamlit () :
     
-    st.markdown("Bienvenue sur Dimoclim &mdash;\
-    :cyclone::")
+    st.title("Bienvenue sur Dimoclim")
 
     option = st.selectbox('Localisation ? ',
     ('EU',
