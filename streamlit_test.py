@@ -9,7 +9,6 @@ import streamlit as st
 import hmac
 import streamlit as st
 
-
 def check_password():
     """Returns `True` if the user had the correct password."""
 
@@ -39,7 +38,7 @@ if not check_password():
 def runstreamlit () :
     
     st.markdown("Bienvenue sur Dimoclim &mdash;\
-        :cyclone ::")
+    :cyclone::")
 
     option = st.selectbox('Localisation ? ',
     ('EU',
